@@ -3,7 +3,7 @@ import './App.css';
 import * as fruit from './data/fruit.json';
 import * as projDetails from './data/projDetails.json'
 import { Chart, ArgumentAxis, ValueAxis, BarSeries } from '@devexpress/dx-react-chart-material-ui';
-import Gantt from './gantt'
+import Gantt from './gantt.js'
 
 /***
  * 
@@ -14,12 +14,36 @@ import Gantt from './gantt'
  * dhtmlx-gantt
  */
 
+let chartData = { //Testing data for the gantt chart
+  data: [],
+  links: [
+    {id: 1, source: 1, target: 3, type: '0'}
+  ]
+}
+
 
 class App extends Component {
   render() {
-    function renderGantt(){
+  function renderGantt(){
 
+      for(let i=0; i < projDetails['length']; i++){
+        let proj = {
+          id: projDetails[i].id, 
+          text: projDetails[i].projName, 
+          start_date: projDetails[i].startDate, 
+          duration: projDetails[i].numDays, 
+          progress: 0
+        }
+
+        chartData['data'].push(proj)
+      }
+
+      console.log(chartData)
     }
+
+    renderGantt()
+
+
 
     function getFruit(indexNum){
       return `You choose ${fruit[indexNum].name} with ${fruit[indexNum].fans} fans`
@@ -49,6 +73,12 @@ class App extends Component {
         <div className='visDiv'>
 
             {barGraph()}
+        </div>
+
+        <div className='ganttViz'>
+          <div className='gantt-container'>
+            <Gantt tasks={chartData} />
+          </div>
         </div>
       </div>
     );

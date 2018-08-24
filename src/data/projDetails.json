@@ -1,17 +1,23 @@
 [
     {
+        "id": 1,
         "projName": "Project Hoth",
         "numDays": 2,
-        "stepCondition": "OT"
+        "stepCondition": "OT",
+        "startDate": "24-08-2018"
     },
     {
+        "id": 2,
         "projName": "Project Bespin",
         "numDays": 3.5,
-        "stepCondition": "AR"
+        "stepCondition": "AR",
+        "startDate": "26-08-2018"
     },
     {
+        "id": 3,
         "projName": "Project Tatooine",
         "numDays": 1,
-        "stepCondition": "IT"
+        "stepCondition": "IT",
+        "startDate": "01-09-2018"
     }
 ]
