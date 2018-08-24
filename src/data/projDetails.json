@@ -1,0 +1,17 @@
+[
+    {
+        "projName": "Project Hoth",
+        "numDays": 2,
+        "stepCondition": "OT"
+    },
+    {
+        "projName": "Project Bespin",
+        "numDays": 3.5,
+        "stepCondition": "AR"
+    },
+    {
+        "projName": "Project Tatooine",
+        "numDays": 1,
+        "stepCondition": "IT"
+    }
+]
