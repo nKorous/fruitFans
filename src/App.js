@@ -37,17 +37,10 @@ class App extends Component {
 
         chartData['data'].push(proj)
       }
-
-      console.log(chartData)
     }
 
+    //push data into global variable so that it can bet used elsewhere instead of just local funcgtion
     renderGantt()
-
-
-
-    function getFruit(indexNum){
-      return `You choose ${fruit[indexNum].name} with ${fruit[indexNum].fans} fans`
-    }
 
     //using devexpress/material-ui chart
     function barGraph(){
